@@ -1,0 +1,85 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+
+.comment {
+    @include gradient;
+    &-heading {
+        p {
+            margin-top: 3rem;
+            font-size: 2rem;
+            color: $white;
+            font-weight: 300;
+        }
+    }
+}
+
+.comment-item {
+    position: relative;
+    padding-bottom: 20rem;
+    &__content {
+        border-radius: .8rem;
+        padding: 2rem 2rem 6rem;
+        background-color: $white;
+        position: relative;
+        &-text {
+            font-size: 1.6rem;
+            color: $gray-700;
+            padding-bottom: 2.5rem;
+            i {
+                font-size: 2.4rem;
+                color: $primary;
+                margin: 0 0.6rem;
+            }
+        }
+        
+    }
+
+    &__people {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%,-35%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        &-evaluate {
+            font-size: 1.6rem;
+            color: $purple-light;
+            margin-bottom: 0.6rem;
+        }
+        &-avt {
+            width: 10rem;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 1.6rem;
+            border: 4px solid $purple-light;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+        &-name {
+            font-size: 3rem;
+            color: $white;
+            font-weight: 600;
+        }
+        &-position {
+            font-size: 1.6rem;
+            color: $white;
+            font-weight: 300;
+        }
+    }
+    
+}
+
+.comment-btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}

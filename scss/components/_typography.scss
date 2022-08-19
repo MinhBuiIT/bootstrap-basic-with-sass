@@ -1,0 +1,96 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+
+html {
+    font-size: 62.5%;
+}
+
+.intro-content {
+    @include media-breakpoint-down(sm) {
+        text-align: center;
+    }
+
+    font-family: 'Poppins',
+    sans-serif;
+
+    &__title {
+        font-size: 7rem;
+        font-weight: 700;
+    }
+
+    &__des {
+        font-size: 2.2rem;
+        font-weight: 400;
+        margin: 1.6rem 0;
+
+        @include media-breakpoint-down(md) {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.section-title {
+    color: $white;
+    font-size: 5rem;
+    @include media-breakpoint-up(lg) {
+        font-size: 6rem;
+    }
+    font-weight: 800;
+    padding-bottom: 1.6rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10rem;
+        height: 3px;
+        border-radius: 100px;
+        background-color: $gray-500;
+    }
+}
+
+.section-title__line {
+    color: $black;
+    font-size: 6rem;
+    @include media-breakpoint-down(md) {
+        font-size: 5rem;
+    }
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    @include line;
+}
+.section-title__line-sm {
+    color: $black;
+    font-size: 3rem;
+    padding-bottom: 0.6rem;
+    @include media-breakpoint-down(md) {
+        font-size: 2rem;
+    }
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    @include line;
+}
+
+.footer-col__title {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1.4rem;
+    margin-bottom: 1.6rem;
+    position: relative;
+    display: inline-block;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 80%;
+        height: 3px;
+        border-radius: 100px;
+        background-color: $gray-700;
+    }
+}

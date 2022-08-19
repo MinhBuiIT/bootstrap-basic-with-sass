@@ -1,0 +1,16 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+
+.bg-nav {
+    @include gradient;
+}
+.list{
+    li {
+        a {
+            padding: 1.4rem 1.6rem !important;
+            font-size: 1.6rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+}

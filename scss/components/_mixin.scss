@@ -1,0 +1,46 @@
+@use '../custom' as *;
+
+@mixin gradient {
+    background: linear-gradient(to right,rgba($primary,0.95),rgba($secondary,1.2)) ;
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin absFull {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin line {
+    .line-title {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 1.6rem;
+    }
+    .line {
+        position: absolute;
+        top: 100%;
+        left: 20%;
+        right: 20%;
+        height: 3px;
+        background-color: $primary;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3rem;
+            height: .6rem;
+            background-color: $primary;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+
+
+.faq {
+    padding: 4rem 0 20rem;
+}
+.faq-heading {
+    // &__title {
+    //     font-size: 6rem;
+    //     position: relative;
+    //     display: inline-block;
+    //     @include line;
+    // }
+    &__para {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+}
+.faq-item {
+    &:not(:first-child) {
+        margin-top: 2rem;
+    }
+    border-radius: 0.375rem;
+    overflow: hidden;
+    border: 1px solid $gray-400 !important;
+    box-shadow: rgba($black, 0.1) 0px 4px 12px;
+}

@@ -1,0 +1,32 @@
+@use '../custom' as *;
+a {
+    text-decoration: none;
+    transition: 0.1s linear;
+    &:hover {
+        color: $primary;
+    }
+}
+.ml-sm {
+    margin-left: 1.6rem;
+}
+.mt-big {
+    margin-top: 8rem;
+}
+.mt-medium {
+    margin-top: 5.5rem;
+}
+.fz-sm {
+    font-size: 1.6rem;
+}
+.hidden-sm {
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
+.center-sm {
+    @include media-breakpoint-down(sm) {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

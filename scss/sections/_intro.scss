@@ -1,0 +1,50 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+@use '../components/animation' as *;
+
+.intro {
+    width: 100%;
+    height: 100%;
+    padding: 16rem 0 0 0;
+    @include gradient;
+}
+.intro-video {
+    position: relative;
+    &__wrap {
+        @include absCenter;
+        &--icon {
+            width: 10rem;
+            height: 10rem;
+            background: $pink;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.25s linear;
+            i {
+                @include absCenter;
+                font-size: 7rem;
+                color: $white;
+                margin-left: 5px;
+            }
+            &:active {
+                transform: scale(0.98) translateY(1px);
+            }
+        }
+        &--ani {
+            @include absFull;
+            background-color: $white;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        &--ani--1 {
+            animation: bubble 2.5s linear infinite;
+        }
+        &--ani--2 {
+            animation: bubble 2.5s linear 0.5s infinite;
+        }
+        &--ani--3 {
+            animation: bubble 2.5s linear 1s infinite;
+        }
+    }
+    
+}
+

@@ -1,0 +1,58 @@
+@use '../components/mixin' as *;
+@use '../custom' as *;
+
+
+.services {
+    padding: 0rem 0 20rem 0;
+    &-title {
+        font-size: 7rem;
+    }
+    @include line;
+}
+.services__intro-title {
+    h3 {
+        font-size: 3rem;
+        text-align: center;
+        padding-right: 2rem;
+        @include media-breakpoint-up(md) {
+            border-right: 1px solid $gray-400;
+        }
+    }
+}
+.services__intro-des {
+    p {
+        font-size: 1.6rem;
+        padding-left: 2rem;
+    }
+}
+
+// services-deltail
+.service-deltail {
+    margin-top: 2.2rem;
+    &__icon {
+        display: block;
+        font-size: 3rem;
+        color: $primary;
+        @include media-breakpoint-up(lg) {
+            font-size: 4rem;
+        }
+    }
+    &__theme {
+        font-size: 3.4rem;
+        @include media-breakpoint-down(sm) {
+            font-size: 2.4rem;
+        }
+        background: linear-gradient(to right,$primary,$pink);
+        display: inline-block;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 0.5rem 0 .8rem 0;
+    }
+    &__des {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        color: $black;
+        font-weight: 400;
+    }
+}

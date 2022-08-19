@@ -1,0 +1,32 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+
+.company {
+    padding-bottom: 20rem;
+    &__title {
+        position: relative;
+        padding-bottom: 1.2rem;
+        display: inline-block;
+        @include line;
+    }
+}
+.company-item {
+    width: 90%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+    img {
+        width: 70%;
+        height: 70%;
+        object-fit: contain;
+        transition: 0.1s linear;
+        &:hover {
+            filter: grayscale(100%);
+        }
+    }
+}
